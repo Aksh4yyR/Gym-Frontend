@@ -177,7 +177,7 @@ const Categories = () => {
                   <Card className="product-card bg-dark text-white">
                     <Card.Img
                       variant="top"
-                      src={`http://localhost:3000/uploads/${product?.image}`}
+                      src={`https://gymshop-server-1.onrender.com/uploads/${product?.image}`}
                       alt={product?.name}
                       className="product-img"
                     />

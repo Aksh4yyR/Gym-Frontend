@@ -58,7 +58,7 @@ const Wishlist = () => {
               {wishlist.map((product) => (
                 <tr key={product._id}>
                   <td>
-                    <img src={`http://localhost:3000/uploads/${product.image}`} alt={product.name} width={50} />
+                    <img src={`https://gymshop-server-1.onrender.com/uploads/${product.image}`} alt={product.name} width={50} />
                   </td>
                   <td>{product.name}</td>
                   <td>{product.description}</td>

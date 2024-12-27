@@ -183,7 +183,7 @@ const ProductsAdded = () => {
                     <td>
                       {product.image ? (
                         <img
-                          src={`http://localhost:3000/uploads/${product.image}`}
+                          src={`https://gymshop-server-1.onrender.com/uploads/${product.image}`}
                           alt={product.name}
                           style={{ width: '100px', objectFit: 'cover' }}
                         />

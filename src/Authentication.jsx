@@ -9,6 +9,7 @@ import authGif from "./assets/auth.gif";
 const Authentication = ({ insideRegister = false }) => {
   const [userDetails, setUserDetails] = useState({ username: "", email: "", password: "", role: "user" });
   const navigate = useNavigate();
+console.log(userDetails);
 
   const handleRegister = async (e) => {
     e.preventDefault();
@@ -17,7 +18,7 @@ const Authentication = ({ insideRegister = false }) => {
     if (username && email && password) {
       try {
         const response = await registerAPI({ ...userDetails, role: "user" });
-        if (response.status === 201) {
+        if (response.status == 200) {
           alert("Registration Successful");
           setUserDetails({ username: "", email: "", password: "" });
           navigate("/login");
@@ -40,7 +41,7 @@ const Authentication = ({ insideRegister = false }) => {
     if (email && password) {
       try {
         const response = await loginAPI(userDetails);
-        if (response.status === 200) {
+        if (response.status == 200) {
           sessionStorage.setItem("token", response.data.token);
           sessionStorage.setItem("user_id", response.data.user.id);
           sessionStorage.setItem("role", response.data.user.role);
